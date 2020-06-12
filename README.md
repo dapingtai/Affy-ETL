@@ -33,12 +33,12 @@ BiocManager::install("affyio")
 ```python
 from Affy_ETL import AETL
 data, data_len = AETL.extract(dir="Your CEL dir",cdf="Your cdf name") 
-```python
+```
 ### 2.Transform
-```
-transform_data = AETL.transform(data, data_len)
 ```python
-### 3.Loading
+transform_data = AETL.transform(data, data_len)
 ```
+### 3.Loading
+```python
 AETL.loading(user="****", passwd="****", address="Your database Ip", dbname="****", tablename="****", data = transform_data)
 ```
